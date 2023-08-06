@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "6d7fdcd3-d9c5-4054-81b7-851de2499a95",
+		"name": "842023",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3647443",
+		"_collection_link": "https://gold-flare-824318.postman.co/workspace/My-Workspace~c37593b2-8d5c-424e-8687-ab7252a5ad76/collection/3647443-6d7fdcd3-d9c5-4054-81b7-851de2499a95?action=share&creator=3647443&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Driver Information old",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ergast.com/api/f1/drivers/{{driver}}",
+					"protocol": "http",
+					"host": [
+						"ergast",
+						"com"
+					],
+					"path": [
+						"api",
+						"f1",
+						"drivers",
+						"{{driver}}"
+					]
+				},
+				"description": "Each driver listed in the response is identified by a unique driverId which is used to identify the driver throughout the API. To obtain information about a particular driver append the driverId\n\nThis endpoint is to obtain the information of a particular driver based on the driverid (driver name)"
+			},
+			"response": [
+				{
+					"name": "Driver Information- Example- Alonso",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://ergast.com/api/f1/drivers/{{driverid}}",
+							"protocol": "http",
+							"host": [
+								"ergast",
+								"com"
+							],
+							"path": [
+								"api",
+								"f1",
+								"drivers",
+								"{{driverid}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 01 Jun 2020 10:57:25 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.2.15 (CentOS)"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/5.3.3"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "587"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/xml; charset=utf-8"
+						}
+					],
+					"cookie": [],
+					"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<?xml-stylesheet type=\"text/xsl\" href=\"/schemas/mrd-1.4.xsl\"?>\n<MRData xmlns=\"http://ergast.com/mrd/1.4\" series=\"f1\" url=\"http://ergast.com/api/f1/drivers/alonso\" limit=\"30\" offset=\"0\" total=\"1\">\n    <DriverTable driverId=\"alonso\">\n        <Driver driverId=\"alonso\" code=\"ALO\" url=\"http://en.wikipedia.org/wiki/Fernando_Alonso\">\n            <PermanentNumber>14</PermanentNumber>\n            <GivenName>Fernando</GivenName>\n            <FamilyName>Alonso</FamilyName>\n            <DateOfBirth>1981-07-29</DateOfBirth>\n            <Nationality>Spanish</Nationality>\n        </Driver>\n    </DriverTable>\n</MRData>"
+				}
+			]
+		}
+	]
+}
