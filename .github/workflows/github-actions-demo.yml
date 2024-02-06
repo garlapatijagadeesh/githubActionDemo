@@ -40,6 +40,8 @@ jobs:
           #    newman run 842023.postman_collection_new.json -r htmlextra --reporter-htmlextra-export testResults/htmlreport.html --reporter-htmlextra-darkTheme  > testResults/runreport1.html
                newman run 842023.postman_collection_new.json -r htmlextra --reporter-htmlextra-export testResults/htmlreport.html --reporter-htmlextra-darkTheme  > testResults/runreport1.html
                ls -l
+               cd testResults
+               ls -l
 
 
       # Upload the contents of Test Results directory to workspace
